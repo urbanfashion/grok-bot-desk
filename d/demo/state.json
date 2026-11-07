@@ -1,0 +1,1 @@
+{"balance": 200.0, "today_pct": 0.0, "multiplier": 1.0, "mode": "PAPER", "agents": [{"name": "Scanner", "status": "running", "count": 0}, {"name": "Auditor", "status": "running", "count": 0}, {"name": "Analyst", "status": "running", "count": 0}, {"name": "Executor", "status": "running", "count": 0}, {"name": "Risk", "status": "running", "count": 0}]}
