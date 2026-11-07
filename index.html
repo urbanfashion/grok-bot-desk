@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon.png">
+<title>Grok Bot</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+  <div class="navbar">
+    <div class="avatar" onclick="showTab('account')">G</div>
+    <div class="title">Grok Bot ›</div>
+    <div class="search">Search</div>
+    <div class="bell">•</div>
+  </div>
+  <div id="home" class="screen">
+    <div class="balance-row">
+      <div class="odometer" id="balance">$200.00</div>
+      <div class="paper-badge" id="paper">PAPER</div>
+    </div>
+    <div class="today">+0.00%</div>
+    <div class="multiplier">1.00×</div>
+    <canvas id="homeChart" class="chart"></canvas>
+    <div class="section-title">Agents · 5 running</div>
+    <div class="agent-carousel" id="agentCards"></div>
+    <div class="section-title">Activity · See all</div>
+    <div id="homeActivity"></div>
+  </div>
+  <div id="agents" class="screen hidden">
+    <div class="section-title">Agents</div>
+    <div id="agentsList"></div>
+  </div>
+  <div id="activity" class="screen hidden">
+    <div class="section-title">Activity</div>
+    <div id="activityList"></div>
+  </div>
+  <div id="account" class="screen hidden">
+    <div class="section-title">Account</div>
+    <div class="row">Mode: <span id="mode">PAPER</span></div>
+    <div class="row">FOMO profile: gentil3</div>
+    <div class="row">Invite a friend</div>
+    <div class="row">Enable notifications</div>
+  </div>
+  <div class="tabbar">
+    <div class="tab" onclick="showTab('home')">Home</div>
+    <div class="tab" onclick="showTab('agents')">Agents</div>
+    <div class="tab" onclick="showTab('activity')">Activity</div>
+    <div class="tab" onclick="showTab('account')">Account</div>
+  </div>
+</div>
+<script src="chart.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
