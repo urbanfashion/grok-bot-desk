@@ -5,7 +5,8 @@ if (location.hash.includes('d=')) localStorage.setItem('DATA_PATH', DATA_PATH);
 async function poll() {
   try {
     const base = `/d/${DATA_PATH}/`;
-    const state = await (await fetch(base + 'state.json')).json();
+    const bust = '?t=' + Date.now();
+    const state = await (await fetch(base + 'state.json' + bust)).json();
     document.getElementById('balance').textContent = '$' + state.balance.toFixed(2);
     document.getElementById('mode').textContent = state.mode;
     document.getElementById('paper').style.display = state.mode === 'PAPER' ? 'inline-block' : 'none';
