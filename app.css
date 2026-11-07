@@ -1,0 +1,51 @@
+:root {
+  --bg: #000;
+  --text: #fff;
+  --secondary: rgba(235,235,245,0.6);
+  --tertiary: rgba(235,235,245,0.3);
+  --sep: rgba(84,84,88,0.55);
+  --card: #1c1c1e;
+  --card2: #2c2c2e;
+  --green: #00d35a;
+  --red: #ff453a;
+  --orange: #ff9f0a;
+  --cyan: #64d2ff;
+  --blue: #0a84ff;
+  --yellow: #ffd60a;
+  --pink: #ff6b9a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: calc(60px + env(safe-area-inset-bottom));
+}
+.navbar {
+  display: flex; align-items: center; padding: 12px 16px; gap: 12px;
+  border-bottom: 0.5px solid var(--sep);
+}
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--card2); display: flex; align-items: center; justify-content: center; font-weight: 600; }
+.title { flex: 1; font-weight: 600; }
+.balance-row { display: flex; align-items: center; gap: 12px; padding: 16px; }
+.odometer { font-family: -apple-system, "SF Pro Display", sans-serif; font-size: 48px; font-variant-numeric: tabular-nums; }
+.paper-badge { background: var(--orange); color: #000; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+.today, .multiplier { padding: 0 16px; color: var(--secondary); }
+.chart { width: calc(100% - 32px); height: 180px; margin: 16px; }
+.section-title { padding: 16px; font-weight: 600; }
+.agent-carousel { display: flex; overflow-x: auto; gap: 12px; padding: 0 16px; scroll-snap-type: x mandatory; }
+.agent-card {
+  min-width: calc(100vw - 32px); aspect-ratio: 504/470; background: var(--card); border-radius: 42px; padding: 20px;
+  scroll-snap-align: start;
+}
+.tabbar {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 60px;
+  background: rgba(28,28,30,0.8); backdrop-filter: blur(20px);
+  display: flex; border-top: 0.5px solid var(--sep);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.tab { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 12px; min-height: 44px; }
+.screen { min-height: 100vh; }
+.hidden { display: none; }
+.row { padding: 16px; border-bottom: 0.5px solid var(--sep); }
