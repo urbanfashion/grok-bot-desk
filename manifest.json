@@ -1,7 +1,8 @@
 {
   "name": "Grok Bot",
   "short_name": "Grok Bot",
-  "start_url": "/",
+  "start_url": "/grok-bot-desk/",
+  "scope": "/grok-bot-desk/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000"
